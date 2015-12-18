@@ -1,0 +1,47 @@
+// ----------------------------------------------------------------------------
+// Sass declarations
+// ----------------------------------------------------------------------------
+$background-color:  #303030;
+$value-color:       #fff;
+
+$title-color:       rgba(255, 255, 255, 0.7);
+$moreinfo-color:    rgba(255, 255, 255, 0.7);
+$updateat-color:    rgba(255, 255, 255, 1);
+$chart-width:       100%;
+$chart-height:      100%;
+
+// ----------------------------------------------------------------------------
+// Widget-line-chart styles
+// ----------------------------------------------------------------------------
+.widget-line-chart {
+
+  background-color: $background-color;
+
+  .title {
+    color: $title-color;
+  }
+
+  .value {
+    color: $value-color;
+  }
+
+  .change-rate {
+    font-weight: 500;
+    font-size: 30px;
+    color: $value-color;
+  }
+
+  .more-info {
+    color: $moreinfo-color;
+  }
+
+  .updated-at {
+    color: $updateat-color;
+  }
+
+  canvas#chart-area.chart-area {
+    width: $chart-width !important;
+    height: $chart-height !important;
+  }
+
+}
