@@ -1,5 +1,9 @@
 # dashing-linechart
 
+## Preview
+
+![LineChart](https://raw.githubusercontent.com/wiki/jorgemorgado/dashing-linechart/linechart.png)
+
 ## Description
 
 Simple [Dashing](http://shopify.github.com/dashing) widget (and associated job)
