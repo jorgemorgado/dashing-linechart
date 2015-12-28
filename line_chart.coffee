@@ -7,10 +7,10 @@ class Dashing.LineChart extends Dashing.Widget
       datasets: @get('datasets')
     }
 
-    @myChart = new Chart(@ctx).Line(@myData, {
+    @myChart = new Chart(@ctx).Line(@myData, $.extend({
       responsive: false
       datasetStroke: true
-    })
+    }, @get('options')))
 
   onData: (data) ->
     # Load new values, ie,
