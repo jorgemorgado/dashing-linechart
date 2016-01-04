@@ -6,8 +6,9 @@ $background-color:  #303030;
 $title-color:       rgba(255, 255, 255, 0.7);
 $moreinfo-color:    rgba(255, 255, 255, 0.7);
 $updateat-color:    rgba(255, 255, 255, 1);
-$chart-width:       100%;
-$chart-height:      100%;
+
+// If you want the title at the top, set the position to 'top'
+$title-position:    center;
 
 // ----------------------------------------------------------------------------
 // Widget-line-chart styles
@@ -15,8 +16,15 @@ $chart-height:      100%;
 .widget-line-chart {
 
   background-color: $background-color;
+  position: relative;
 
   .title {
+    @if $title-position == 'top' {
+      left: 0;
+      right: 0;
+      top: 10px;
+      position: absolute;
+    }
     color: $title-color;
   }
 
@@ -26,11 +34,6 @@ $chart-height:      100%;
 
   .updated-at {
     color: $updateat-color;
-  }
-
-  canvas#chart-area.chart-area {
-    width: $chart-width !important;
-    height: $chart-height !important;
   }
 
 }
