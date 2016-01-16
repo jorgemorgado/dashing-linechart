@@ -16,7 +16,6 @@ $title-position:    center;
 .widget-line-chart {
 
   background-color: $background-color;
-  position: relative;
 
   .title {
     @if $title-position == 'top' {
@@ -25,6 +24,11 @@ $title-position:    center;
       top: 10px;
       position: absolute;
     }
+    @else {
+      position: relative;
+    }
+
+    z-index: 1;
     color: $title-color;
   }
 
