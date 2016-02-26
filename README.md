@@ -16,6 +16,9 @@ and copy it into `assets/javascripts`.
 
 ## Usage
 
+Create the directory `widgets/line_chart` and copy this widget's files
+into that folder.
+
 Add the following code on the desired dashboard:
 
 ```erb
