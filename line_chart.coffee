@@ -4,9 +4,9 @@ class Dashing.LineChart extends Dashing.Widget
     # Margins: zero if not set or the same as the opposite margin
     # (you likely want this to keep the chart centered within the widget)
     left = @get('leftMargin') || 0
-    right = if @get('rightMargin')? then @get('rightMargin') else left
+    right = @get('rightMargin') || left
     top = @get('topMargin') || 0
-    bottom = if @get('bottomMargin')? then @get('bottomMargin') else top
+    bottom = @get('bottomMargin') || top
 
     container = $(@node).parent()
     # Gross hacks. Let's fix this.
