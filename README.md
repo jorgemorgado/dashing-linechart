@@ -11,8 +11,11 @@ to render line charts. Uses [Chart.js](http://www.chartjs.org/) library.
 
 ## Dependencies
 
-Download `Chart.min.js` from [http://www.chartjs.org](http://www.chartjs.org)
+Download the latest V1 release of `Chart.min.js` from
+[https://github.com/chartjs/Chart.js/releases](https://github.com/chartjs/Chart.js/releases)
 and copy it into `assets/javascripts`.
+
+`dashing-linechart` is not yet compatible with V2 of ChartJS.
 
 ## Usage
 
