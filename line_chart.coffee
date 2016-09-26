@@ -44,6 +44,6 @@ class Dashing.LineChart extends Dashing.Widget
     if @myChart && data.datasets
       for i in [0..@myChart.datasets.length - 1]
         for j in [0..@myChart.datasets[i].points.length - 1]
-           @myChart.datasets[i].points[j].value = data.datasets[i].data[j]
+          @myChart.datasets[i].points[j].value = data.datasets[i].data[j]
 
       @myChart.update()
