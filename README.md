@@ -11,11 +11,16 @@ to render line charts. Uses [Chart.js](http://www.chartjs.org/) library.
 
 ## Dependencies
 
-Download the latest V1 release of `Chart.min.js` from
+Download the latest v2.x.x release of `Chart.bundle.min.js` from
 [https://github.com/chartjs/Chart.js/releases](https://github.com/chartjs/Chart.js/releases)
-and copy it into `assets/javascripts`.
+and copy it into `assets/javascripts`. Make sure to remove any older versions
+of Chart.js from the `assets/javascripts` folder.
 
-`dashing-linechart` is not yet compatible with V2 of ChartJS.
+NOTE: `dashing-linechart` is compatible with v2 of Chart.js. If you still
+want to use the older version of Chart.js, you need to download the latest v1
+of `Chart.min.js` and install [v1.0](https://github.com/jorgemorgado/dashing-linechart/releases/tag/v1.0)
+of this widget. Although, remember that older versions are not maintained
+anymore.
 
 ## Usage
 
@@ -28,6 +33,7 @@ Add the following code on the desired dashboard:
 <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
   <div data-id="linechart" data-view ="LineChart" data-title="Line Chart" data-moreinfo=""></div>
 </li>
+
 ```
 
 Create your line chart job `my_linechart_job.rb`:
@@ -37,22 +43,20 @@ Create your line chart job `my_linechart_job.rb`:
 labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July']
 data = [
   {
-    label: 'My First dataset',
-    fillColor: 'rgba(220,220,220,0.5)',
-    strokeColor: 'rgba(220,220,220,0.8)',
-    highlightFill: 'rgba(220,220,220,0.75)',
-    highlightStroke: 'rgba(220,220,220,1)',
+    label: 'First dataset',
     data: Array.new(labels.length) { rand(40..80) },
+    backgroundColor: [ 'rgba(255, 99, 132, 0.2)' ] * labels.length,
+    borderColor: [ 'rgba(255, 99, 132, 1)' ] * labels.length,
+    borderWidth: 1,
   }, {
-    label: 'My Second dataset',
-    fillColor: 'rgba(151,187,205,0.5)',
-    strokeColor: 'rgba(151,187,205,0.8)',
-    highlightFill: 'rgba(151,187,205,0.75)',
-    highlightStroke: 'rgba(151,187,205,1)',
+    label: 'Second dataset',
     data: Array.new(labels.length) { rand(40..80) },
+    backgroundColor: [ 'rgba(255, 206, 86, 0.2)' ] * labels.length,
+    borderColor: [ 'rgba(255, 206, 86, 1)' ] * labels.length,
+    borderWidth: 1,
   }
 ]
-options = { scaleFontColor: '#fff' }
+options = { }
 
 send_event('linechart', { labels: labels, datasets: data, options: options })
 ```
@@ -96,3 +100,12 @@ the widget. If not, set their values also using the `data-` attributes:
 ## License
 
 This widget is released under the [MIT License](http://www.opensource.org/licenses/MIT).
+
+## Other Chart.js Widgets
+
+- [Bar Chart](https://github.com/jorgemorgado/dashing-barchart)
+- [Bubble Chart](https://github.com/jorgemorgado/dashing-bubblechart)
+- [Doughnut Chart](https://github.com/jorgemorgado/dashing-doughnutchart)
+- [Pie Chart](https://github.com/jorgemorgado/dashing-piechart)
+- [Polar Chart](https://github.com/jorgemorgado/dashing-polarchart)
+- [Radar Chart](https://github.com/jorgemorgado/dashing-radarchart)
