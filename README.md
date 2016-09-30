@@ -95,7 +95,8 @@ the widget. If not, set their values also using the `data-` attributes:
 
 ## Contributors
 
-- [Jorge Morgado](https://github.com/jorgemorgado)
+- [Jorge Morgado](https://github.com/jorgemorgado) (Author)
+- [Steve Wells](https://github.com/SteveWells)
 
 ## License
 
