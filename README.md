@@ -6,8 +6,8 @@
 
 ## Description
 
-Simple [Dashing](http://shopify.github.com/dashing) widget (and associated job)
-to render line charts. Uses [Chart.js](http://www.chartjs.org/) library.
+Simple [Smashing](https://smashing.github.io/)/[Dashing](http://shopify.github.com/dashing)
+widget (and associated job) to render line charts. Uses [Chart.js](http://www.chartjs.org/) library.
 
 ## Dependencies
 
